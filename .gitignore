@@ -141,3 +141,6 @@ GitHub.sublime-settings
 *.DS_Store
 **/__pycache__
 **/.DS_Store
+
+Pipfile
+Pipfile.lock

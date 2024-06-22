@@ -9,6 +9,9 @@ class Menu(models.Model):
 
     def __str__(self):
         return self.title 
+    
+    def get_item(self):
+        return f'{self.title} : {str(self.price)}'
 
     # id = models.SmallIntegerField(max_length=5)
     # title = models.CharField(max_length=255)
