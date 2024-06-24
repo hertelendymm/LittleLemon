@@ -15,7 +15,7 @@ def sayHello(request):
 def index(request):
     return render(request, 'index.html', {})
 
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 class MenuItemView(ListCreateAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer

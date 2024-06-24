@@ -8,15 +8,10 @@ class Menu(models.Model):
     inventory = models.PositiveIntegerField()  # Inventory (int(5))
 
     def __str__(self):
-        return self.title 
-    
-    def get_item(self):
         return f'{self.title} : {str(self.price)}'
-
-    # id = models.SmallIntegerField(max_length=5)
-    # title = models.CharField(max_length=255)
-    # price = 
-    # inventory =  
+    
+    class Meta:
+        db_table = "menu"
 
 
 class Booking(models.Model):
@@ -27,10 +22,6 @@ class Booking(models.Model):
 
     def __str__(self):
         return self.name
-
-    # first_name = models.CharField(max_length=200)
-    # reservation_date = models.DateField()
-    # reservation_slot = models.SmallIntegerField(default=10)
-    # name = models.CharField(max_length=200) 
-    # price = models.IntegerField(null=False) 
-    # menu_item_description = models.TextField(max_length=1000, default='') 
+    
+    class Meta:
+        db_table = "booking"
